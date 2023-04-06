@@ -73,7 +73,7 @@ function App() {
             {
               tasks.length > 0 ?
                 tasks.map(task => (
-                  <Task taskData={task} onDeleteTask={handleDeleteTask} onCheckTask={handleCheckTask} />
+                  <Task key={task.id} taskData={task} onDeleteTask={handleDeleteTask} onCheckTask={handleCheckTask} />
                 )) :
                 <div className={styles.noTasksInfo} >
                   <img src="/src/assets/clipboard.svg" alt="Wireframe de um clipboard" />
